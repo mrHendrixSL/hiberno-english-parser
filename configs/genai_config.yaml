@@ -1,0 +1,41 @@
+"""
+Configuration for the GenAI‑based Hiberno‑English parser.
+
+This file defines how the GenAI parser should be executed. Settings can
+be overridden on the command line of ``scripts/run_genai_parser.py``.
+"""
+
+# Path to the JSON or JSONL file containing paragraphs to parse. Each
+# record should have an ``entry_id`` and ``entry_text`` field. The
+# repository includes a small sample dataset in ``examples/``.
+input_json: "examples/sample_entries.json"
+
+# Path to append parsed outputs. Each record will be a JSON object with
+# fields ``entry_id``, ``source_text``, ``data``, ``flags`` and
+# ``needs_review``. The file will be created if it does not exist.
+output_jsonl: "outputs/genai_parser_output.jsonl"
+
+# Path to append error records. Each line captures the ``entry_id`` and
+# error details if parsing fails.
+error_jsonl: "outputs/genai_parser_errors.jsonl"
+
+# Base URL for the LLM API. For OpenAI you might leave this empty to use
+# the default; for a local model specify the local endpoint.
+base_url: null
+
+# Name or identifier of the model to use. For OpenAI this is the model
+# name; for a local model it may be an arbitrary string.
+model_name: "gpt-4-turbo"
+
+# Temperature setting for generation. Lower values favour determinism.
+temperature: 0.1
+
+# Maximum number of tokens to request from the model.
+max_tokens: 1200
+
+# Control how many new rows to process. Use ``null`` to process all.
+max_new_rows: 10
+
+# Number of unfinished rows to skip before starting. Useful for
+# resuming interrupted runs.
+skip_unfinished_rows: 0

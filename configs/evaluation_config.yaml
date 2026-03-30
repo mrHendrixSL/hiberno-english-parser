@@ -1,0 +1,24 @@
+"""
+Configuration for evaluating and comparing parser outputs.
+
+Provide paths to the outputs of the rule‑based and GenAI parsers along
+with optional mapping files for POS and regions. The evaluation
+script produces merged outputs and summary reports in ``output_dir``.
+"""
+
+# Path to the rule‑based parser JSONL output
+rule_output: "outputs/rule_parser_output.jsonl"
+
+# Path to the GenAI parser JSONL output
+genai_output: "outputs/genai_parser_output.jsonl"
+
+# Optional path to a POS normalisation map (JSON). If omitted or null
+# the output POS lists are left unchanged.
+pos_map: "resources/pos_map.json"
+
+# Optional path to a region normalisation map (JSON). If omitted or null
+# the output region lists are left unchanged.
+region_map: "resources/region_normalization_map.json"
+
+# Directory to write merged outputs and reports
+output_dir: "outputs/evaluation"

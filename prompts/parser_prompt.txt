@@ -1,0 +1,27 @@
+Return JSON only.
+
+Extract exactly these keys:
+headword_raw
+headword
+pronunciations
+part_of_speech
+definition
+examples
+etymology
+cross_references
+region_mentions
+
+Rules:
+- Output must be a valid JSON object only.
+- No markdown.
+- No commentary.
+- Lists must be arrays.
+- Use [] if empty.
+- Use "" if a scalar field is empty.
+- examples must always be a JSON array.
+- pronunciations must always be a JSON array.
+- cross_references must always be a JSON array.
+- region_mentions must always be a JSON array.
+
+ENTRY:
+{{ entry_text }}

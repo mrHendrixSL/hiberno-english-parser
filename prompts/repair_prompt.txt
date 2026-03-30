@@ -1,0 +1,4 @@
+The previous response was not valid JSON. Please return only the JSON
+object described in the instructions without any additional text or
+markdown. Fix any formatting issues and ensure all lists and strings
+follow the schema.

@@ -1,0 +1,24 @@
+"""
+Configuration for the rule‑based Hiberno‑English parser.
+
+Specify input and output paths relative to the project root. These
+settings are consumed by ``scripts/run_rule_parser.py``.
+"""
+
+# Path to the input DOCX file containing the dictionary.
+input_docx: "data/A_Dictionary_of_Hiberno_English.docx"
+
+# Destination for the parsed entries. Each record is written as a JSON
+# object on its own line. The directory will be created if it does not
+# exist.
+output_jsonl: "outputs/rule_parser_output.jsonl"
+
+# Optional CSV export of the parsed entries. Omit or set to null to
+# disable.
+output_csv: "outputs/rule_parser_output.csv"
+
+# Flag indicating whether to compute and save an audit of paragraphs.
+write_audit: true
+
+# Location to save the audit CSV if ``write_audit`` is true.
+audit_csv: "outputs/rule_parser_audit.csv"

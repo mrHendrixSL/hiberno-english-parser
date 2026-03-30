@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Hiberno English Rule Parser Output",
+  "type": "object",
+  "required": ["entry_id", "source_text"],
+  "properties": {
+    "entry_id": {"type": "integer"},
+    "source_text": {"type": "string"},
+    "headword_raw": {"type": ["string", "null"]},
+    "headword": {"type": ["string", "null"]},
+    "variant_forms_raw": {"type": ["string", "null"]},
+    "variant_forms": {"type": "array", "items": {"type": "string"}},
+    "pronunciation": {"type": ["string", "null"]},
+    "pronunciation_2": {"type": ["string", "null"]},
+    "pronunciation_3": {"type": ["string", "null"]},
+    "pronunciation_4": {"type": ["string", "null"]},
+    "part_of_speech": {"type": ["string", "null"]},
+    "grammatical_labels": {"type": "array", "items": {"type": "string"}},
+    "definition": {"type": ["string", "null"]},
+    "etymology": {"type": ["string", "null"]},
+    "cross_references": {"type": "array", "items": {"type": "string"}},
+    "examples": {"type": "array", "items": {"type": "string"}},
+    "region_mentions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {"type": "string"},
+          "place": {"type": "string"}
+        },
+        "required": ["code", "place"]
+      }
+    },
+    "entry_type": {"type": "string"},
+    "parse_confidence": {"type": "number"},
+    "parse_notes": {"type": "array", "items": {"type": "string"}}
+  }
+}

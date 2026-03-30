@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Hiberno English GenAI Parser Output",
+  "type": "object",
+  "required": ["entry_id", "source_text", "data", "flags", "needs_review"],
+  "properties": {
+    "entry_id": {"type": "string"},
+    "source_text": {"type": "string"},
+    "data": {
+      "type": "object",
+      "properties": {
+        "headword_raw": {"type": "string"},
+        "headword": {"type": "string"},
+        "variant_forms_raw": {"type": ["string", "null"]},
+        "variant_forms": {"type": "array", "items": {"type": "string"}},
+        "pronunciations": {"type": "array", "items": {"type": "string"}},
+        "part_of_speech": {"type": "array", "items": {"type": "string"}},
+        "definition": {"type": "string"},
+        "examples": {"type": "array", "items": {"type": "string"}},
+        "etymology": {"type": ["string", "null"]},
+        "cross_references": {"type": "array", "items": {"type": "string"}},
+        "region_mentions": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "flags": {
+      "type": "object",
+      "properties": {
+        "missing_headword": {"type": "boolean"},
+        "missing_definition": {"type": "boolean"},
+        "bad_examples": {"type": "boolean"}
+      },
+      "additionalProperties": true
+    },
+    "needs_review": {"type": "boolean"}
+  }
+}
