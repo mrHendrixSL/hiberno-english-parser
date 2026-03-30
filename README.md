@@ -64,9 +64,14 @@ pip install -r requirements.txt
 ```
 
 The project requires Python ≥ 3.9. Some components (e.g. LLM parsing)
-also depend on external services. You should create a `.env` file based
-on `.env.example` and supply any required API keys (for example
-`OPENAI_API_KEY`).
+also depend on external services. The GenAI parsing pipeline is configured to run against a **local LLM endpoint** (e.g. GPT4All or other OpenAI-compatible APIs). This avoids dependency on external services and ensures reproducibility.
+
+By default:
+- No API keys are required
+- The system expects a locally running model endpoint
+
+Optional:
+If using external APIs (e.g. OpenAI), create a `.env` file based on `.env.example` and provide the necessary credentials.
 
 ### Rule‑based parser
 
