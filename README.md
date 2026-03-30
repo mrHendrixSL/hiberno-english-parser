@@ -1,6 +1,6 @@
 # Hiberno‑English Parser
 
-This repository contains a clean, modular and reproducible codebase for
+This repository contains a modular and reproducible codebase for
 parsing entries from **A Dictionary of Hiberno‑English**. Two
 alternative pipelines are provided:
 
