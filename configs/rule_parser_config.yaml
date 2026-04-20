@@ -1,0 +1,9 @@
+# Rule-based parser configuration
+# All paths are relative to the repository root.
+
+paths:
+  input:  data/paragraphs.json          # raw extracted paragraphs
+  output: data/rule_based_output.json   # parsed entries (written here)
+
+coverage:
+  warn_below: 80     # log a warning for entries with coverage_pct below this value

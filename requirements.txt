@@ -1,0 +1,24 @@
+# Core parsing — no external dependencies needed
+# (parse_entry.py uses stdlib re only)
+
+# GenAI extraction
+anthropic>=0.25.0
+tqdm>=4.66.0
+
+# Evaluation pipeline
+pandas>=2.0.0
+numpy>=1.26.0
+openpyxl>=3.1.0
+
+# Configuration
+pyyaml>=6.0.1
+
+# Optional: load .env for API keys
+python-dotenv>=1.0.0
+
+# Optional: visualisations (notebooks only)
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Testing
+pytest>=8.0.0

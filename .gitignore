@@ -1,0 +1,59 @@
+# Environment & secrets
+.env
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated outputs — not committed to source control
+outputs/
+data/*.json
+data/*.xlsx
+
+# Source dictionary — binary, use git-lfs if you need it versioned
+data/*.docx
+
+# Windows artefacts
+*.lnk
+Thumbs.db
+desktop.ini
+
+# macOS
+.DS_Store
+
+# Legacy folder (keep in repo as reference, but ignore outputs inside it)
+legacy/*/outputs/
+legacy/*/__pycache__/
+legacy/*/*.pyc

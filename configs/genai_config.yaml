@@ -1,0 +1,30 @@
+# GenAI extraction configuration
+# All paths are relative to the repository root.
+# Set ANTHROPIC_API_KEY in .env or in your shell environment.
+
+model:       claude-sonnet-4-5
+max_tokens:  1500
+temperature: 0
+
+extraction:
+  batch_size:        5     # entries per API request
+  rate_limit_delay:  2.0   # seconds between batches
+  checkpoint_every:  50    # checkpoint output after this many entries
+
+cost_estimate:
+  input_tokens_per_entry:   800
+  output_tokens_per_entry:  300
+  cost_per_million_input:   3.00
+  cost_per_million_output:  15.00
+
+paths:
+  prompt:      prompts/system_prompt_v2.txt   # system prompt text file
+  input:       data/rule_based_output.json    # rule-based output used as extraction input
+  output:      outputs/genai/llm_output.json  # LLM extraction results
+  log:         outputs/genai/extraction.log
+
+rerun:
+  output:      outputs/genai/llm_rerun.json
+  merged:      outputs/genai/llm_output_v2.json
+  prompt:      prompts/system_prompt_v2.txt
+  coverage_threshold: 70   # flag entries with coverage below this %

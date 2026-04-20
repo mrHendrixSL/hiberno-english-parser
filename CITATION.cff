@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: >
+  If you use this software in your research, please cite it using
+  the metadata below.
+
+title: "Hiberno-English Parser"
+abstract: >
+  A modular Python codebase for parsing and evaluating structured field
+  extraction from A Dictionary of Hiberno-English (Dolan, 2006).
+  Provides a rule-based parser and a GenAI (LLM-assisted) extraction
+  pipeline, along with a side-by-side evaluation framework.
+
+# [PLACEHOLDER] Replace with actual author information before publishing.
+authors:
+  - family-names: "[Author Surname]"
+    given-names:  "[Author Given Name]"
+    orcid:        "https://orcid.org/[YOUR-ORCID]"
+
+version: "1.0.0"
+date-released: "2026-04-20"
+license: MIT
+
+references:
+  - type: book
+    authors:
+      - family-names: Dolan
+        given-names:  Terence Patrick
+    title: "A Dictionary of Hiberno-English: The Irish Use of English"
+    year:  2006
+    publisher:
+      name: Gill & Macmillan
+    isbn: "978-0717137565"

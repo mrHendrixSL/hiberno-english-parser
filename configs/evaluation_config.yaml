@@ -1,0 +1,12 @@
+# Evaluation pipeline configuration
+# All paths are relative to the repository root.
+
+paths:
+  rule_based:   data/rule_based_output.json
+  llm:          outputs/genai/llm_output_v2.json
+  output_json:  outputs/evaluation/comparison.json
+  output_xlsx:  outputs/evaluation/comparison.xlsx
+
+settings:
+  excel_export:        true
+  top_n_disagreements: 5
