@@ -12,9 +12,9 @@ abstract: >
 
 # [PLACEHOLDER] Replace with actual author information before publishing.
 authors:
-  - family-names: "[Author Surname]"
-    given-names:  "[Author Given Name]"
-    orcid:        "https://orcid.org/[YOUR-ORCID]"
+  - family-names: Edirisinghe
+    given-names:  Rasika
+    orcid:        https://orcid.org/0009-0008-4673-0259
 
 version: "1.0.0"
 date-released: "2026-04-20"
